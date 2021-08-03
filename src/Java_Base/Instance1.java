@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
+ * 变量
  * 1.实例方法中实例变量的直接调用
  * 2.静态方法和main方法（本质也是静态方法）中对于实例变量的调用
  * 3.实例方法的调用(被静态方法调用以及被同类中其他实例方法调用)
