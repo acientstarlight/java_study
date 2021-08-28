@@ -4,6 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * 日期
+ */
 public class DateTime {
     public static void main(String[] args) {
         SimpleDateFormat timeFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
