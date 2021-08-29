@@ -50,7 +50,6 @@ class Apple extends Fruit{
         Apple b = (Apple) f;
         //这样就可以执行子类中独有的方法
         b.show();
-
     }
 }
 
