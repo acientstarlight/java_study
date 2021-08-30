@@ -5,13 +5,27 @@ package Java_ObjectOriented;
  */
 public class Abstract2 extends Abstract{
 
-    //子类中必须要重写抽象父类所有的抽象方法，非抽象的方法可以不实现
+    //子类中必须要实现抽象父类所有的抽象方法，可以直接调用或者重写（参数类型和个数一致，返回值类型与父类的返回类型一样或其子类）
+    // 父类抽象类中非抽象的方法可以不实现
+    //重写父类的抽象方法
     @Override
     public void eat(){
         System.out.println("可以吃苹果了");
     }
 
-    @Override
+    //这样写属于直接调用抽象父类的方法
+//    public void eat(){
+//        System.out.println("可以吃苹果了");
+//    }
+
+   //可以重载与父类同名的方法，但此处不是子类重写或者调用了抽次昂父类的方法，只是自己的方法，属于重载
+    public String eat(String name){
+        name = "我";
+        System.out.println(""+name+"可以吃苹果了");
+        return name;
+    }
+
+    //直接调用抽象父类方法
     public void send() {
         num = 20;
         System.out.println("输送苹果"+num+"个");
@@ -20,6 +34,7 @@ public class Abstract2 extends Abstract{
     public static void main(String[] args) {
         Abstract2 abstract2 = new Abstract2();
         abstract2.eat();
+        abstract2.eat("我");
         abstract2.send();
         //父类的方法，继承而来只是没有重写
         abstract2.get();

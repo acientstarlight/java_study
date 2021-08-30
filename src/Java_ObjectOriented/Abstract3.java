@@ -8,7 +8,7 @@ package Java_ObjectOriented;
 abstract class Abstract3 extends Abstract{
 
     //抽象子类可以重写父类的任何方法,不需要必须重写抽象父类的方法，也不是必须有抽象方法
-    @Override
+
     public void send(){
     }
 
