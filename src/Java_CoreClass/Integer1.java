@@ -58,5 +58,16 @@ public class Integer1 {
             int n = m;
             //2--parseInt() 方法用于将字符串参数作为有符号的十进制整数进行解析(parseInt(String s))
             int o = Integer.parseInt(k);
+
+            // Interger转成int等类型，比较大小
+            Integer a1 = 20;
+            Integer b1 = 21;
+            System.out.println(a1.intValue());
+            System.out.println(a1.byteValue());
+            System.out.println(a1.shortValue());
+            System.out.println(a1.longValue());
+            //前一个值小于后一个值返回-1
+            int a2 = Integer.compare(1,2);
+            System.out.println(a2);
     }
 }
