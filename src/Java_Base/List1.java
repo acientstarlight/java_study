@@ -10,7 +10,7 @@ import java.util.*;
  * Arrays sort排序
  */
 
-public class List {
+public class List1 {
     int[] list4;
     boolean flag;
 
@@ -28,6 +28,10 @@ public class List {
         //数组的赋值
         list3[0] = 9;
         list3[1] = 10;
+        List list6 = new ArrayList();
+        list6.get(0);
+        list6.set(0,"2");
+
         //遍历整个数组
         //方法一 ：Arrays.toString(list)(为Sting类型)
         System.out.println("方法一："+ Arrays.toString(list3));
@@ -184,7 +188,7 @@ public class List {
     }
 
     public static void main(String[] args) {
-        List listOperate = new List();
+        List1 listOperate = new List1();
 
         listOperate.countList();
 
@@ -198,7 +202,7 @@ public class List {
         listOperate.list4 = new int[]{11, 12, 13};
         System.out.println("111"+ Arrays.toString(listOperate.list4));
 
-        listOperate.sort();
+        listOperate.sort();;
 
         int[] ns = {1,2,3,11,21,22,9,10,8};
         int[] numsort = listOperate.bubbleSort(ns);
