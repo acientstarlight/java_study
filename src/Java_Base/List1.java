@@ -28,9 +28,11 @@ public class List1 {
         //数组的赋值
         list3[0] = 9;
         list3[1] = 10;
-        List list6 = new ArrayList();
-        list6.get(0);
+        List<String> list6 = new ArrayList<>();
+        list6.add("2");
         list6.set(0,"2");
+        System.out.println("list6第一个元素为： "+list6.get(0));
+        System.out.println("list6:"+list6);
 
         //遍历整个数组
         //方法一 ：Arrays.toString(list)(为Sting类型)

@@ -2,6 +2,8 @@ package Java_CoreClass;
 
 import java.sql.SQLOutput;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * java核心类--String
@@ -129,5 +131,27 @@ public class String1 {
         /* 判断字符串 */
         String l1 = "aaaaassss";
         System.out.println(l1.contains("sss"));
+
+        /* String 匹配 */
+        // 将一个字符串编译成 Pattern 对象
+        Pattern p = Pattern.compile("a*b");
+        // 使用 Pattern 对象创建 Matcher 对象
+        Matcher m = p.matcher("aaaaab");
+        boolean b2 = m.matches(); // 返回 true
+        System.out.println(b2);
+        //以上等同于：
+        boolean b3 = Pattern.matches ("a*b","aaaaab");
+        System.out.println(b3);
+
+        // 使用字符串模拟从网络上得到的网页源码
+        String str = "我想找一套适合自己的JAVA教程，尽快联系我13500006666" + "交朋友，电话号码是13611125565" + "出售二手电脑，联系方式15899903312";
+        // 创建一个Pattern对象，并用它建立一个Matcher对象
+        // 该正则表达式只抓取13X和15X段的手机号
+        // 实际要抓取哪些电话号码，只要修改正则表达式即可
+        Matcher m2 = Pattern.compile("((13\\d)|(15\\d))\\d{8}").matcher(str);
+        // 将所有符合正则表达式的子串（电话号码）全部输出
+        while (m2.find()) {
+            System.out.println(m2.group());
+        }
     }
 }
