@@ -2,6 +2,7 @@ package Java_Base2;
 
 import Java_Base.Modifier2;
 import Java_Base.Modifier5;
+
 //1.4default修饰符访问权限（不同包）-不可引入default修饰的接口
 //import Java_Base.Modifier4;(报错)
 

@@ -1,7 +1,5 @@
 package Java_CoreClass;
 
-import java.sql.SQLOutput;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
